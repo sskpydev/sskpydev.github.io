@@ -93,17 +93,16 @@ section {
 
 /* news */
 #news dl {
-    display: flex;
-    flex-wrap: wrap;
     border-top: 1px solid #c0c0c0;
 }
 #news dt {
-    width: 20%;
+    float:left;
     border-bottom: 1px solid #c0c0c0;
     padding: 15px;
+    margin-right: 30px;
+
 }
 #news dd {
-    width: 80%;
     border-bottom: 1px solid #c0c0c0;
     padding: 15px;
 }
