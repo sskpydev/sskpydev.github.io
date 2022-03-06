@@ -1,1 +1,2 @@
-# sskpydev.github.io
+# LICENSE
+[MIT License]()
