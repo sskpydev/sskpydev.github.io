@@ -13,7 +13,7 @@ li {
 }
 
 .wrapper {
-    max-width: 730px;
+    max-width: 760px;
     font-size: 0.9rem;
     margin: 0px auto 150px auto;
 }
@@ -32,7 +32,7 @@ li {
 header
 ------------------------------ */
 #header {
-    max-width: 730px;
+    max-width: 760px;
     height: 250px;
     display: flex;
     justify-content: space-between;
@@ -80,21 +80,13 @@ main
 }
 
 /* works */
-#works li {
+#works ul {
     display: flex;
-}
-#works li:nth-child(2n) {
-    flex-direction: row-reverse;
-    margin: 35px 0px;
-}
-#works li:nth-child(2n+1) img {
-    margin-right: 35px;
-}
-#works li:nth-child(2n) img {
-    margin-left: 35px;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }
 #works img {
-    width: 365px;
+    width: 240px;
     flex-shrink: 0;
     border-radius: 5px;
     filter: drop-shadow(0 0 0.2rem #000);
