@@ -8,58 +8,59 @@
         <meta name="keywords" content="sskpydev,SSKPY'S DEV.,unity,pyxel" />
         <meta name="description" content="PyxelとかUnityを使ってゲーム制作をしています。良かったら見ていってね！" />
         <title>SSKPY - PORTFOLIO</title>
-        <link rel="stylesheet" href="./css/grid.css" />
+        <link rel="icon" href="/favicon.ico">
         <link rel="stylesheet" href="./css/style.css" />
     </head>
 
     <body>
         <header id="header">
-            <h1 class="site-title"><a href="#">SSKPY'S DEV.</a></h1>
+            <h1 class="site-title"><a href="#"><img src="assets/img/logo.png" alt="img" /></a></h1>
             <nav>
                 <ul>
-                    <li><a href="#about">ABOUT</a></li>
-                    <li><a href="#works">WORKS</a></li>
-                    <li><a href="#news">NEWS</a></li>
-                    <li><a href="#contact">CONTACT</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#works">Works</a></li>
+                    <li><a href="#news">News</a></li>
+                    <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
         </header>
 
-        <div id="header-img">
-            <img src="assets/img/breakout.png" />
-        </div>
-
         <main id="main">
+            <div id="mainvisual">
+                <picture>
+                    <source srcset="assets/img/breakout.png" media="(max-width: 700px)" />
+                    <img src="assets/img/breakout.png" alt="img" />
+                </picture>
+            </div>
             <section id="about" class="wrapper">
-                <h2 class="section-title">ABOUT</h2>
+                <h2 class="section-title">About</h2>
+                <img src="assets/img/icon.png" />
                 <dev class="content">
-                    <img src="assets/img/icon.png" />
-                    <dev class="right">
-                        <h3 class="content-title">Hi, I'm SSKPY&#x1f44b;</h3>
-                        <p class ="content-text">
-                            I'm a computer enthusiast who enjoys programming.
-                            So, I usually study computer science in college.
-                            I also like to create games for me with Unity and Pyxel.
-                            I especially love retro horror games, so someday I could publish an original retro horror game!
-                        </p>
-                    </dev>
+                    <h3 class="content-title">Hi, I'm SSKPY&#x1f44b;</h3>
+                    <p>
+                        I'm a computer enthusiast who enjoys programming.
+                        So, I usually study computer science in college.
+                        I also like to create games for me with Unity and Pyxel.
+                        I especially love retro horror games, so someday I could publish an original game!
+                    </p>
                 </dev>
             </section>
             <section id="works" class="wrapper">
-                <h2 class="section-title">WORKS</h2>
+                <h2 class="section-title">Works</h2>
                 <ul>
                     <li>
                         <a href="#"><img src="assets/img/breakout.png" alt="img" /></a>
-                        <div class="right">
+                        <div class="content">
                             <h3 class="content-title">BREAKOUT</h3>
                             <p>
                                 2022.03.XX</br>
+                                I created a BREAKOUT like Atari using Pyxel to practice Python.
                             </p>
                         </div>
                     </li>
                     <li>
                         <a href="#"><img src="assets/img/developing.png" alt="img" /></a>
-                        <div class="right">
+                        <div class="content">
                             <h3 class="content-title">Coming soon...</h3>
                             <p>
                                 2022.XX.XX</br>
@@ -68,7 +69,7 @@
                     </li>
                     <li>
                         <a href="#"><img src="assets/img/developing.png" alt="img" /></a>
-                        <div class="right">
+                        <div class="content">
                             <h3 class="content-title">Coming soon...</h3>
                             <p>
                                 2022.XX.XX</br>
@@ -78,7 +79,7 @@
                 </ul>
             </section>
             <section id="news" class="wrapper">
-                <h2 class="section-title">NEWS</h2>
+                <h2 class="section-title">News</h2>
                 <dl>
                     <dt>2022.03.07</dt>
                     <dd>I developed a Breakout like Atari with Pyxel.</dd>
@@ -93,7 +94,7 @@
                 </dl>
             </section>
             <section id="contact" class="wrapper">
-                <h2 class="section-title">CONTACT</h2>
+                <h2 class="section-title">Contact</h2>
                 <ul>
                     <li><a href="#"><img src="assets/img/github.png" /></a></li>
                 </ul>
