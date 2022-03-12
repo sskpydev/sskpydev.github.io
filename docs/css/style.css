@@ -2,109 +2,170 @@
     margin: 0;
     padding: 0;
 }
+html {
+    font-size: 100%;
+}
+body {
+    color: #121212;
+    font-size: 0.9rem;
+    line-height: 1.7;
+}
 a {
+    color: #121212;
     text-decoration: none;
 }
-p {
-    text-align: justify;
+img {
+    max-width: 100%;
 }
 li {
     list-style: none;
 }
 
-.wrapper {
-    max-width: 760px;
-    font-size: 0.9rem;
-    margin: 0px auto 150px auto;
-}
-.site-title {
-    text-align: center;
-}
 .section-title {
+    font-size: 2.25rem;
+    margin-bottom: 30px;
     text-align: center;
-    margin-bottom: 50px;
 }
-.content-title {
-    margin-bottom: 15px;
+
+.fadein {
+    opacity: 0;
+    transform: translateY(20px);
+    transition: all 1s;
 }
 
 /* ------------------------------
 header
 ------------------------------ */
 #header {
-    max-width: 760px;
-    height: 250px;
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    align-items: center;
-    margin: 0px auto;
+    position: fixed;
+    z-index: 10;
+    background: #fff;
 }
-#header ul {
-    display: flex;
+#nav {
+    display: block;
+    position: fixed;
+    top: 0px;
+    right: -300px;
+    width: 300px;
+    background: #121212;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+    transition: all 0.5s;
+    z-index: 20;
+    opacity: 0;
 }
-#header li {
-    margin-left: 30px;
+#nav a {
+    color: #fff;
 }
-#header li a {
-    font-size: 0.9rem;
-    color: #000;
+#nav li {
+    margin-bottom: 10px;
 }
-#header li a:hover {
-    opacity: 0.7;
+.open #nav {
+    right: 0px;
+    opacity: 1;
+}
+.toggle_btn {
+    display: block;
+    position: fixed;
+    top: 25px;
+    right: 45px;
+    width: 30px;
+    height: 30px;
+    transition: all 0.5s;
+    z-index: 20;
+    cursor: pointer;
+}
+.toggle_btn span {
+    display: block;
+    position: absolute;
+    width: 30px;
+    height: 2px;
+    background: #333;
+    border-radius: 4px;
+    transition: all 0.5s;
+}
+.toggle_btn span:nth-child(1) {
+    top: 4px;
+}
+.toggle_btn span:nth-child(2) {
+    top: 14px;
+}
+.toggle_btn span:nth-child(3) {
+    bottom: 4px;
+}
+.open .toggle_btn span {
+    background: #fff;
+}
+.open .toggle_btn span:nth-child(1) {
+    -webkit-transform: translateY(10px) rotate(-315deg);
+    transform: translateY(10px) rotate(-315deg);
+}
+.open .toggle_btn span:nth-child(2) {
+    opacity: 0;
+}
+.open .toggle_btn span:nth-child(3) {
+    -webkit-transform: translateY(-10px) rotate(315deg);
+    transform: translateY(-10px) rotate(315deg);
+}
+#mask {
+    display: none;
+    transform: all 0.5s;
+}
+.open #mask {
+    display: block;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    background: #000;
+    opacity: 0.8;
+    z-index: 10px;
+    cursor: pointer;
 }
 
 /* ------------------------------
 main
 ------------------------------ */
 /* mainvisual */
-#mainvisual {
-    margin-bottom: 100px;
-}
-#mainvisual img {
-    width: 100%;
-    max-width: 1920px;
-    height: 400px;
-    object-fit: cover;
-}
 
 /* about */
-#about {
-    display: flex;
-}
-#about img {
-    width: 135px;
-    height: 135px;
-    border-radius: 50%;
-    margin-right: 35px;
-    filter: drop-shadow(0 0 0.2rem #000);
-}
 
 /* works */
-#works ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+#works {
+    max-width: 1280px;
+    padding: 0px 30px;
+    margin: 100px auto 100px auto;
 }
-#works img {
-    width: 240px;
-    flex-shrink: 0;
-    border-radius: 5px;
-    filter: drop-shadow(0 0 0.2rem #000);
+#works .grid {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
-
-/* news */
-#news dl {
-    border-top: 1px solid #c0c0c0;
+#works .grid .item {
+    box-shadow: 0 0 8px 4px #ccc;
 }
-#news dt {
-    float: left;
-    border-bottom: 1px solid #c0c0c0;
-    padding: 15px;
-    margin-right: 70px;
+#works .grid .item img {
+    vertical-align: top;
 }
-#news dd {
-    border-bottom: 1px solid #c0c0c0;
-    padding: 15px;
+#works .grid .item .item-content {
+    padding: 30px;
+}
+#works .grid .item .item-cat {
+    font-size: 0.75rem;
+    margin-bottom: 20px;
+}
+#works .grid .item .item-text {
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+#works .grid .item .item-date {
+    font-size: 0.75rem;
+    text-align: right;
 }
 
 /* ------------------------------
