@@ -32,7 +32,7 @@ li {
 }
 .section-title {
     font-size: 2.25rem;
-    margin-bottom: 30px;
+    margin-bottom: 50px;
     text-align: center;
 }
 
@@ -43,12 +43,12 @@ li {
 }
 
 /* ------------------------------
-header
+Header
 ------------------------------ */
 #header {
     width: 100%;
     min-height: 100vh;
-    background-image: url(./img/hoge.png);
+    background-image: url(../img/hoge.png);
     background-size: cover;
     background-position: center top;
     background-repeat: no-repeat;
@@ -72,11 +72,15 @@ header
     color: #fff;
 }
 #nav .nav-menu {
+    margin-bottom: 60px;
     border-top: solid 1px #fff;
 }
 #nav .nav-menu li {
     padding: 20px 0px;
     border-bottom: solid 1px #fff;
+}
+#nav .nav-link li {
+    padding: 5px 0px;
 }
 .open #nav {
     left: 0px;
@@ -127,7 +131,6 @@ header
 }
 #mask {
     display: none;
-    transform: all 0.5s;
 }
 .open #mask {
     display: block;
@@ -138,23 +141,23 @@ header
     height: 100%;
     background: #000;
     opacity: 0.8;
-    z-index: 10px;
+    z-index: 10;
     cursor: pointer;
 }
 
 /* ------------------------------
-main
+Main
 ------------------------------ */
 /* works */
 #works {
     max-width: 1280px;
-    padding: 0px 30px;
+    padding: 50px 30px;
     margin: 100px auto 100px auto;
 }
 #works .grid {
     display: grid;
-    gap: 20px;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
 }
 #works .grid .item {
     box-shadow: 0 0 8px 4px #ccc;
@@ -179,7 +182,7 @@ main
 }
 
 /* ------------------------------
-footer
+Footer
 ------------------------------ */
 #footer p {
     background: #121212;
