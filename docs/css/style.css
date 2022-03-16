@@ -33,12 +33,6 @@ a:hover {
         transform: translateY(0px);
     }
 }
-.delay-time02 {
-    animation-delay: 0.2s;
-}
-.delay-time04 {
-    animation-delay: 0.4s;
-}
 
 /* ------------------------------
 Header
@@ -185,6 +179,15 @@ Main
 #main .post .post-content p {
     color: #515151;
     line-height: 1.5rem;
+}
+#main .post:nth-child(2) {
+    animation-delay: 0.2s;
+}
+#main .post:nth-child(3) {
+    animation-delay: 0.4s;
+}
+#main .post:nth-child(4) {
+    animation-delay: 0.6s;
 }
 
 /* ------------------------------
