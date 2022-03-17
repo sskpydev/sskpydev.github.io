@@ -16,9 +16,14 @@
 
     <body>
         <header id="header">
-            <h1 class="site-title">SSKPY'S DEV.</h1>
+            <h1 class="site-title">
+                <picture>
+                    <source srcset="./img/logo2.png" media="(max-width: 600px)" />
+                    <img src="./img/logo1.png" alt="" />
+                </picture>
+            </h1>
 
-            <nav>
+            <nav id="nav">
                 <ul class="nav-menu">
                     <li><a href="#">Posts</a></li>
                     <li><a href="https://github.com/sskpydev">GitHub</a></li>
@@ -37,7 +42,7 @@
         </header>
 
         <main id="main">
-            <article class="post fadein">
+            <article class="post fadeUpTrigger">
                 <h2 class="post-title"><a href="#">Simple blog title</a></h2>
                 <p class="post-date">2022/03/XX</p>
                 <div class="post-content">
@@ -45,32 +50,44 @@
                         Text Text Text Text Text Text Text Text Text Text
                         Text Text Text Text Text Text Text Text Text Text
                         Text Text Text Text Text Text Text Text Text Text
-                        Text Text Text Text Text Text Text Text Text Text
-                        Text Text Text Text Text Text Text Text
+                        Text Text Text Text Text Text Text.
                     </p>
                 </div>
             </article>
 
-            <article class="post fadein">
+            <article class="post fadeUpTrigger">
+                <h2 class="post-title"><a href="#">Simple blog title</a></h2>
+                <p class="post-date">2022/03/XX</p>
+                <div class="post-content">
+                    <p>
+                        Text Text Text Text Text Text Text Text Text Text
+                        Text Text Text Text Text Text Text Text Text Text
+                        Text Text Text Text Text Text Text Text Text Text
+                        Text Text Text Text Text Text Text.
+                    </p>
+                </div>
+            </article>
+
+            <article class="post fadeUpTrigger">
                 <h2 class="post-title"><a href="#">Breakout with Pyxel.</a></h2>
                 <p class="post-date">2022/03/XX</p>
                 <div class="post-content">
                     <img src="./img/breakout.png" alt="" />
                     <p>
-                        Atari-like breakout game using Pyxel, a Python library.
-                        This work was created as a tutorial for object-oriented and game development.
+                        I created a breakout game like the Atari 2600 using Pyxel, a Python game engine.
+                        This work is a tutorial on object-oriented and game development.
                     </p>
                 </div>
             </article>
 
-            <article class="post fadein">
-                <h2 class="post-title"><a href="#">My new website!</a></h2>
+            <article class="post fadeUpTrigger">
+                <h2 class="post-title"><a href="#">My new portfolio!</a></h2>
                 <p class="post-date">2022/03/16</p>
                 <div class="post-content">
                     <p>
                         I opened my simple website with GitHub Pages, since 2022.
                         The website is created with pure HTML5 + CSS3 + jQuery, and the source code is on GitHub.
-                        The design was intended to be blog-like, easy to read, and easy to post.
+                        The design was designed to be easy to post and easy to read, just like a blog.
                     </p>
                 </div>
             </article>

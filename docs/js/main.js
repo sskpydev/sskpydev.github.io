@@ -1,20 +1,42 @@
-$(function(){
-    /* ------------------------------
-    hamburger button
-    ------------------------------ */
-    $('.toggle_btn').on('click', function() {
-        if ($('#header').hasClass('open')) {
-            $('#header').removeClass('open');
+/* ------------------------------
+hamburger button
+------------------------------ */
+$('.toggle_btn').on('click', function() {
+    if ($('#header').hasClass('open')) {
+        $('#header').removeClass('open');
+    } else {
+        $('#header').addClass('open');
+    }
+});
+
+$('.nav-menu li a').on('click', function() {
+    $('#header').removeClass('open');
+});
+
+$('#mask').on('click', function() {
+    $('#header').removeClass('open');
+});
+
+/* ------------------------------
+fadeup
+------------------------------ */
+function fadeAnime() {
+    $('.fadeUpTrigger').each(function() {
+        var scroll = $(window).scrollTop();
+        var target = $(this).offset().top;
+        var windowHeight = $(window).height();
+        if (scroll >= target - windowHeight + 50) {
+            $(this).addClass('fadeUp');
         } else {
-            $('#header').addClass('open');
+            $(this).removeClass('fadeUp');
         }
     });
+};
 
-    $('#nav a').on('click', function() {
-        $('#header').removeClass('open');
-    })
+$(window).on('load', function() {
+    fadeAnime();
+});
 
-    $('#mask').on('click', function() {
-        $('#header').removeClass('open');
-    })
+$(window).scroll(function() {
+    fadeAnime();
 });
