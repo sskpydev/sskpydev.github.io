@@ -1,4 +1,4 @@
-
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@900&display=swap');
 
 * {
     padding: 0;
@@ -6,25 +6,37 @@
     box-sizing: border-box;
 }
 
-/* ------------------------------
-header
------------------------------- */
+html {
+    scroll-snap-type: y mandatory;
+}
 
+body {
+    font-family: 'Noto Sans JP', sans-serif;
+    font-size: 4rem;
+}
 
+section {
+    scroll-snap-align: start;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    color: #fff;
+}
 
-/* ------------------------------
-main
------------------------------- */
+section:nth-child(1) {
+    background: #4287f5;
+}
 
+section:nth-child(2) {
+    background: #f54242;
+}
 
+section:nth-child(3) {
+    background: #2dcc4d;
+}
 
-/* ------------------------------
-footer
------------------------------- */
-
-
-
-/* ------------------------------
-animation-area
------------------------------- */
+section:nth-child(4) {
+    background: #a442f5;
+}
 
