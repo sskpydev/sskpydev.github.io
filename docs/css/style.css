@@ -20,7 +20,7 @@ section {
     align-items: center;
     width: 100%;
     height: 100vh;
-    padding: 150px 100px;
+    padding: 100px;
     color: #fff;
 }
 
@@ -40,21 +40,23 @@ section:nth-child(4) {
     background: #a442f5;
 }
 
-section .container {
+#top .container {
     max-width: 1080px;
 }
 
-section ul {
+#contact ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-section ul li {
+#contact ul li {
     list-style: none;
 }
 
-section ul li img {
+#contact ul li img {
+    display: block;
     width: 100px;
+    height: 100px;
 }
