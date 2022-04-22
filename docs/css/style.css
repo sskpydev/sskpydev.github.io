@@ -7,20 +7,18 @@
 }
 
 html {
-    scroll-snap-type: y mandatory;
-}
-
-body {
     font-family: 'Baloo 2', cursive;
     font-size: 4rem;
+    scroll-snap-type: y mandatory;
 }
 
 section {
     scroll-snap-align: start;
     display: flex;
     flex-direction: column;
-    align-items: center;
     justify-content: center;
+    align-items: center;
+    width: 100%;
     height: 100vh;
     padding: 150px 100px;
     color: #fff;
@@ -44,4 +42,19 @@ section:nth-child(4) {
 
 section .container {
     max-width: 1080px;
+}
+
+section ul {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+}
+
+section ul li {
+    list-style: none;
+}
+
+section ul li img {
+    width: 100px;
 }
