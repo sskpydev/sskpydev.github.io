@@ -1,57 +1,38 @@
-/* ------------------------------
-fadeUp
------------------------------- */
-function fadeUp() {
-    $('.fadeUpTrigger').each(function() {
-        var scroll = $(window).scrollTop();
-        var target = $(this).offset().top;
-        var windowHeight = $(window).height();
-        if (scroll >= target - windowHeight + 50) {
-            $(this).addClass('fadeUp');
-        } else {
-            $(this).removeClass('fadeUp');
-        }
+const paginations = document.querySelectorAll(".paginationBox a");
+paginations.forEach(pagination => {
+    pagination.addEventListener("click", e => {
+        e.preventDefault();
+        var targetId = e.target.hash;
+        var target = document.querySelector(targetId);
+        target.scrollIntoView({ behavior: "smooth" });
     });
+});
+
+const sections = document.querySelectorAll("section");
+const observerRoot = document.querySelector("main");
+const options = {
+    root: observerRoot,
+    rootMargin: "-50% 0px",
+    threshold: 0
 };
-
-$(window).on('load', function() {
-    fadeUp();
+const observer = new IntersectionObserver(doWhenIntersect, options);
+sections.forEach(section => {
+    observer.observe(section);
 });
 
-$(window).scroll(function() {
-    fadeUp();
-});
-
-/* ------------------------------
-openButton
------------------------------- */
-$(function() {
-    $('.toggle_btn').on('click', function() {
-        if ($('#header').hasClass('open')) {
-            $('#header').removeClass('open');
-        } else {
-            $('#header').addClass('open');
+function doWhenIntersect(entries) {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            activatePagination(entry.target);
         }
     });
+}
 
-    $('.nav-menu li a').on('click', function() {
-        $('#header').removeClass('open');
-    });
-
-    $('#mask').on('click', function() {
-        $('#header').removeClass('open');
-    });
-});
-
-/* ------------------------------
-smoothScroll
------------------------------- */
-$(function() {
-    $('a[href*="#"]').click(function() {
-        var href = $(this).attr('href');
-        var target = $(href == '#' || href == '' ? 'html' : href);
-        var position = target.offset().top;
-        $("html, body").animate({scrollTop:position}, 500, "swing");
-        return false;
-    });
-});
+function activatePagination(element) {
+    const currentActiveIndex = document.querySelector("paginationBox .active");
+    if (currentActiveIndex !== null) {
+        currentActiveIndex.classList.remove("active");
+    }
+    const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
+    newActiveIndex.classList.add("active");
+}

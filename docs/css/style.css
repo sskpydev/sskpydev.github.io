@@ -67,3 +67,27 @@ section .container {
     height: 100px;
     border-radius: 50%;
 }
+
+.paginationBox {
+    position: fixed;
+    top: 50%;
+    right: 30px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.paginationBox a {
+    display: block;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #fcfcfc;
+    transition: transform 0.2s;
+}
+
+.paginationBox a.active {
+    transform: scale(1.8);
+} 
