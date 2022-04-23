@@ -1,4 +1,4 @@
-const paginations = document.querySelectorAll(".paginationBox a");
+const paginations = document.querySelectorAll(".pagination a");
 paginations.forEach(pagination => {
     pagination.addEventListener("click", e => {
         e.preventDefault();
@@ -9,7 +9,7 @@ paginations.forEach(pagination => {
 });
 
 const sections = document.querySelectorAll("section");
-const observerRoot = document.querySelector("main");
+const observerRoot = document.querySelector("#main");
 const options = {
     root: observerRoot,
     rootMargin: "-50% 0px",
@@ -29,10 +29,10 @@ function doWhenIntersect(entries) {
 }
 
 function activatePagination(element) {
-    const currentActiveIndex = document.querySelector("paginationBox .active");
+    var currentActiveIndex = document.querySelector(".pagination .active");
     if (currentActiveIndex !== null) {
         currentActiveIndex.classList.remove("active");
     }
-    const newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
+    var newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
     newActiveIndex.classList.add("active");
 }

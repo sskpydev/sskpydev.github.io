@@ -25,53 +25,58 @@ section {
 }
 
 section:nth-child(1) {
-    background: #4287f5;
+    background: #87DE54;
 }
 
 section:nth-child(2) {
-    background: #f54242;
+    background: #DEAB54;
 }
 
 section:nth-child(3) {
-    background: #2dcc4d;
+    background: #DE5487;
 }
 
 section:nth-child(4) {
-    background: #a442f5;
+    background: #AB54DE;
 }
 
-section .container {
+section:nth-child(5) {
+    background: #5487DE;
+}
+
+section p {
     max-width: 1080px;
 }
 
-#contact ul {
+#section5 ul {
     display: flex;
     justify-content: center;
     align-items: center;
     gap: 50px;
 }
 
-#contact ul li {
+#section5 ul li {
     list-style: none;
 }
 
-#contact ul li a {
+#section5 ul li a {
     display: block;
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
 
-#contact ul li a img {
+#section5 ul li a img {
     width: 100px;
     height: 100px;
     border-radius: 50%;
 }
 
-.paginationBox {
+.pagination {
     position: fixed;
     top: 50%;
     right: 30px;
+    transform: translate(-50%, -50%);
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -79,7 +84,7 @@ section .container {
     gap: 30px;
 }
 
-.paginationBox a {
+.pagination a {
     display: block;
     width: 15px;
     height: 15px;
@@ -88,6 +93,6 @@ section .container {
     transition: transform 0.2s;
 }
 
-.paginationBox a.active {
+.pagination a.active {
     transform: scale(1.8);
 } 
