@@ -9,8 +9,16 @@
 html {
     font-family: 'Baloo 2', cursive;
     font-size: 4rem;
-    scroll-snap-type: y proximity;
+    scroll-snap-type: y mandatory;
 }
+
+/* header
+
+====================================================*/
+
+/* main
+
+====================================================*/
 
 section {
     scroll-snap-align: start;
@@ -44,9 +52,17 @@ section:nth-child(5) {
     background: #5487DE;
 }
 
-section p {
+section .container {
     max-width: 1080px;
 }
+
+/* --- section4 --- */
+
+#section4 ul li {
+    font-size: 0.8rem;
+}
+
+/* --- section5 --- */
 
 #section5 ul {
     display: flex;
@@ -72,10 +88,18 @@ section p {
     border-radius: 50%;
 }
 
+/* footer
+
+====================================================*/
+
+/* pagination
+
+====================================================*/
+
 .pagination {
     position: fixed;
-    top: 50%;
     right: 30px;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
 
