@@ -52,10 +52,6 @@ section:nth-child(5) {
     background: #5487DE;
 }
 
-section .container {
-    max-width: 1080px;
-}
-
 /* --- section1 --- */
 
 #section1 p {   
@@ -77,7 +73,7 @@ section .container {
     display: block;
     width: 40px;
     height: 40px;
-    margin: 50px 0;
+    margin: 60px 0;
 }
 
 #section1 .btn {
@@ -96,6 +92,69 @@ section .container {
 }
 
 /* --- section2 --- */
+
+#section2 {
+    flex-direction: row;
+}
+
+#section2 img {
+    width: 400px;
+    height: 400px;
+    margin-right: 80px;
+}
+
+#section2 .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-width: 600px;
+}
+
+#section2 .container h2 {
+    font-size: 1rem;
+}
+
+#section2 .container p {
+    font-size: 0.3rem;
+    text-align: center;
+    margin: 50px 0;
+}
+
+#section2 .container ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+#section2 .container ul .item {
+    font-weight: bold;
+    font-size: 0.3rem;
+    list-style: none;
+    border: 1px solid #fff;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+
+/* --- section3 --- */
+
+#section3 h2 {
+    font-size: 1rem;
+}
+
+/* --- section4 --- */
+
+#section4 h2 {
+    font-size: 1rem;
+}
+
+/* --- section5 --- */
+
+#section5 h2 {
+    font-size: 1rem;
+}
 
 
 /* footer

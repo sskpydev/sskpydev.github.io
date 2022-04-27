@@ -1,4 +1,4 @@
-const paginations = document.querySelectorAll(".smooth-link");
+const paginations = document.querySelectorAll(".smooth");
 paginations.forEach(pagination => {
     pagination.addEventListener("click", e => {
         e.preventDefault();
