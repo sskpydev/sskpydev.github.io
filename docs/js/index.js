@@ -1,8 +1,9 @@
-const paginations = document.querySelectorAll(".pagination a");
+const paginations = document.querySelectorAll(".smooth-link");
 paginations.forEach(pagination => {
     pagination.addEventListener("click", e => {
         e.preventDefault();
         var targetId = e.target.hash;
+        console.log(targetId);
         var target = document.querySelector(targetId);
         target.scrollIntoView({ behavior: "smooth" });
     });
