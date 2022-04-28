@@ -118,7 +118,7 @@ section:nth-child(5) {
 #section2 .container p {
     font-size: 0.3rem;
     text-align: center;
-    margin: 50px 0;
+    margin: 30px 0;
 }
 
 #section2 .container ul {
@@ -151,13 +151,14 @@ section:nth-child(5) {
 #section3 .container ul {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
     gap: 30px;
+    margin: 30px 0;
 }
 
 #section3 .container ul li {
-    min-width: 500px;
+    min-width: 50%;
     font-size: 0.3rem;
     list-style: none;
     border: 1px solid #fff;
