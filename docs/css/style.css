@@ -32,7 +32,6 @@ header nav a.active,
 header nav a:hover {
     background: #fff;
     color: darkcyan;
-
 }
 
 /* main
@@ -40,34 +39,18 @@ header nav a:hover {
 ====================================================*/
 
 section {
-    scroll-snap-align: start;
+    min-height: 100vh;
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 100%;
-    height: 100vh;
-    padding: 100px;
+    font-size: 7em;
+    color: #ccc;
+    font-weight: bold;
+    text-transform: uppercase;
 }
 
-section:nth-child(1) {
-    background: #87DE54;
-}
-
-section:nth-child(2) {
-    background: #DEAB54;
-}
-
-section:nth-child(3) {
-    background: #DE5487;
-}
-
-section:nth-child(4) {
-    background: #AB54DE;
-}
-
-section:nth-child(5) {
-    background: #5487DE;
+section:nth-child(odd) {
+    background: #eee;
 }
 
 /* --- section1 --- */

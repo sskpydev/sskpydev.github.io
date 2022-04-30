@@ -1,39 +1,18 @@
-const paginations = document.querySelectorAll(".smooth");
-paginations.forEach(pagination => {
-    pagination.addEventListener("click", e => {
-        e.preventDefault();
-        var targetId = e.target.hash;
-        console.log(targetId);
-        var target = document.querySelector(targetId);
-        target.scrollIntoView({ behavior: "smooth" });
-    });
-});
+var sections = document.querySelectorAll('section');
+var navLinks =document.querySelectorAll('header nav a');
 
-const sections = document.querySelectorAll("section");
-const observerRoot = document.querySelector("#main");
-const options = {
-    root: observerRoot,
-    rootMargin: "-50% 0px",
-    threshold: 0
-};
-const observer = new IntersectionObserver(doWhenIntersect, options);
-sections.forEach(section => {
-    observer.observe(section);
-});
+window.onscroll = () => {
+    sections.forEach(section => {
+        var top = window.scrollY;
+        var offset = section.offsetTop - 150;
+        var height = section.offsetHeight
+        var id = section.getAttribute('id');
 
-function doWhenIntersect(entries) {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            activatePagination(entry.target);
+        if (top >= offset && top < offset + height) {
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                document.querySelector('header nav a[href*=' + id + ']').classList.add('active');
+            })
         }
-    });
-}
-
-function activatePagination(element) {
-    var currentActiveIndex = document.querySelector(".pagination .active");
-    if (currentActiveIndex !== null) {
-        currentActiveIndex.classList.remove("active");
-    }
-    var newActiveIndex = document.querySelector(`a[href='#${element.id}']`);
-    newActiveIndex.classList.add("active");
+    })
 }
