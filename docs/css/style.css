@@ -1,21 +1,39 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap');
 
 * {
-    padding: 0;
-    margin: 0;
+    padding: 0; margin: 0;
     box-sizing: border-box;
-}
-
-html {
     font-family: 'Open Sans', sans-serif;
-    font-size: 4rem;
-    color: #fff;
-    scroll-snap-type: y mandatory;
+    text-decoration: none;
+    scroll-behavior: smooth;
 }
 
 /* header
 
 ====================================================*/
+
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+    background: darkcyan;
+    padding: 25px;
+    text-align: center;
+}
+
+header nav a {
+    padding: 10px 25px;
+    color: #fff;
+    font-size: 20px;
+    text-transform: capitalize;
+}
+
+header nav a.active,
+header nav a:hover {
+    background: #fff;
+    color: darkcyan;
+
+}
 
 /* main
 
